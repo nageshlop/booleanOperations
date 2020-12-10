@@ -15,6 +15,12 @@ matrix:
       # required to run python3.7 on Travis CI
       # https://github.com/travis-ci/travis-ci/issues/9815
       dist: xenial
+# ppc64le support code
+    - arch: ppc64le
+      python: 3.6
+    - arch: ppc64le 
+      python: 3.7
+      dist: xenial
 
 install:
   - pip install --upgrade pip setuptools wheel
