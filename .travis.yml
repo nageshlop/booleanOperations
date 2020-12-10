@@ -1,8 +1,5 @@
 language: python
-arch:
-  - amd64
-  - ppc64le
-  
+
 env:
   global:
     - TWINE_USERNAME="anthrotype"
@@ -16,12 +13,11 @@ matrix:
       # https://github.com/travis-ci/travis-ci/issues/9815
       dist: xenial
 # ppc64le support code
-    - arch: ppc64le
-      python: 3.6
-    - arch: ppc64le 
-      python: 3.7
-      dist: xenial
-
+    - python: 3.6
+      arch: ppc64le
+    - python: 3.7
+      arch: ppc64le 
+      
 install:
   - pip install --upgrade pip setuptools wheel
   - pip install tox-travis
