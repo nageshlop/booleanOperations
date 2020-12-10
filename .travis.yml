@@ -1,5 +1,8 @@
 language: python
-
+arch:
+  - amd64
+  - ppc64le
+  
 env:
   global:
     - TWINE_USERNAME="anthrotype"
